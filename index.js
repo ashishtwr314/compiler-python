@@ -11,6 +11,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(bodyParser.json());
 
+app.get("/", (req, res) => {
+  res.send("HIII WELCOME TO APP");
+});
+
 app.post("/compile", (req, res) => {
   try {
     let _code = req.body.code;
