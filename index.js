@@ -3,7 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const { PythonShell } = require("python-shell");
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 const app = express();
 app.use(cors());
 app.options("*", cors());
